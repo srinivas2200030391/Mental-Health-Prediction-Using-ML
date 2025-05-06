@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Wellness Assessment | Professional Tool</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Mental Wellness Assessment</h1>
+
+        <div class="grid">
+            <!-- Form Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h2>Your Information</h2>
+                </div>
+
+                <form method="post">
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" min="1" max="120" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Academic Pressure</label>
+                        <div class="range-container">
+                            <input type="range" name="academic_pressure" min="0" max="5" step="1" value="3" oninput="this.nextElementSibling.textContent = this.value">
+                            <span class="range-value">3</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="work_pressure">Work Pressure</label>
+                        <input type="number" id="work_pressure" name="work_pressure" min="0" max="5" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Study Satisfaction</label>
+                        <div class="range-container">
+                            <input type="range" name="study_satisfaction" min="0" max="5" step="1" value="3" oninput="this.nextElementSibling.textContent = this.value">
+                            <span class="range-value">3</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="job_satisfaction">Job Satisfaction</label>
+                        <input type="number" id="job_satisfaction" name="job_satisfaction" min="0" max="5" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sleep_duration">Sleep Duration</label>
+                        <select id="sleep_duration" name="sleep_duration" required>
+                            <option value="Less than 5 hours">Less than 5 hours</option>
+                            <option value="5-6 hours">5-6 hours</option>
+                            <option value="7-8 hours" selected>7-8 hours</option>
+                            <option value="More than 8 hours">More than 8 hours</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dietary_habits">Dietary Habits</label>
+                        <select id="dietary_habits" name="dietary_habits" required>
+                            <option value="Healthy">Healthy</option>
+                            <option value="Moderate" selected>Moderate</option>
+                            <option value="Unhealthy">Unhealthy</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="suicidal_thoughts">Have you ever had suicidal thoughts?</label>
+                        <select id="suicidal_thoughts" name="suicidal_thoughts" required>
+                            <option value="No" selected>No</option>
+                            <option value="Yes">Yes</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Work/Study Hours</label>
+                        <div class="range-container">
+                            <input type="range" name="work_study_hours" min="0" max="15" step="1" value="8" oninput="this.nextElementSibling.textContent = this.value">
+                            <span class="range-value">8</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Financial Stress</label>
+                        <div class="range-container">
+                            <input type="range" name="financial_stress" min="0" max="5" step="1" value="3" oninput="this.nextElementSibling.textContent = this.value">
+                            <span class="range-value">3</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="family_history">Family History of Mental Illness</label>
+                        <select id="family_history" name="family_history" required>
+                            <option value="No" selected>No</option>
+                            <option value="Yes">Yes</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+<!--                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;">-->
+<!--                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>-->
+<!--                        </svg>-->
+                        Analyze My Results
+                    </button>
+                </form>
+            </div>
+
+            <!-- Results Section -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h2>Assessment Results</h2>
+                </div>
+
+                {% if prediction is not none %}
+                    <div class="result-card {% if prediction == 1 %}result-negative{% else %}result-positive{% endif %} animate-in">
+                        {% if prediction == 1 %}
+                            <h3 class="font-semibold">⚠️ Elevated Risk Detected</h3>
+                            <p>We recommend consulting with a mental health professional.</p>
+                        {% else %}
+                            <h3 class="font-semibold">✨ Positive Mental Health</h3>
+                            <p>Your assessment shows positive indicators of mental wellness.</p>
+                        {% endif %}
+                    </div>
+
+                    <div class="recommendations-grid">
+                        {% if musics %}
+                        <div class="recommendation-section animate-in delay-100">
+                            <h4>🌿 Beautiful Music</h4>
+                            <ul>
+                                {% for music in musics %}<li>{{ music }}</li>{% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+                        {% if positive %}
+                        <div class="recommendation-section animate-in delay-200" style="margin-bottom=10px">
+                            <h4>🌿 Daily Wellness Habits</h4>
+                            <ul>
+                                {% for habit in positive %}<li>{{ habit }}</li>{% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+
+                        {% if books %}
+                        <div class="recommendation-section animate-in delay-300">
+                            <h4>📚 Joyful Books to Keep You Smiling</h4>
+                            <ul>
+                                {% for book in books %}<li>{{ book }}</li>{% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+
+                        {% if happy_songs %}
+                        <div class="recommendation-section animate-in delay-400">
+                            <h4>🎶 Happy Tunes to Dance With</h4>
+                            <ul>
+                                {% for song in happy_songs %}<li>{{ song }}</li>{% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+
+                        {% if movies %}
+                        <div class="recommendation-section animate-in delay-100 card">
+                            <h4>🎬 Movies to Brighten Your Day</h4>
+                            <ul>
+                                {% for movie in movies %}<li>{{ movie }}</li>{% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+
+                        {% if quotes %}
+                        <div class="recommendation-section animate-in delay-200 card">
+                            <h4>💬 Uplifting Quotes to Inspire You</h4>
+                            <ul>
+                                {% for quote in quotes %}<li>{{ quote }}</li>{% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+
+                        {% if activities %}
+                        <div class="recommendation-section animate-in delay-300 card">
+                            <h4>🌈 Fun Activities to Brighten Your Day</h4>
+                            <ul>
+                                {% for activity in activities %}<li>{{ activity }}</li>{% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+
+                        {% if hobbies %}
+                        <div class="recommendation-section animate-in delay-400 card">
+                            <h4>🎨 Hobbies to Explore</h4>
+                            <ul>
+                                {% for hobby in hobbies %}<li>{{ hobby }}</li>{% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+                    </div>
+                {% else %}
+                    <div class="text-center">
+                        <p>Complete the assessment form to see your results and personalized recommendations.</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
